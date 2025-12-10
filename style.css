@@ -1,0 +1,143 @@
+/* 全局设置 */
+:root {
+    --primary-color: #2563eb; /* 主色调：蓝色 */
+    --text-color: #333;
+    --bg-light: #f9f9f9;
+    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+/* 导航栏 */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: #333; font-weight: 500; }
+.nav-links a:hover { color: var(--primary-color); }
+
+/* 主页 Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px;
+}
+.hero h1 { margin: 10px 0; font-size: 2.5rem; }
+.hero h2 { color: #666; font-weight: 400; margin-bottom: 20px; }
+.hero p { max-width: 600px; margin: 0 auto 30px; }
+.social-links a { margin: 0 10px; color: #333; text-decoration: none; font-size: 1.2rem; }
+
+/* 通用板块设置 */
+.section-container { padding: 4rem 10%; }
+.bg-light { background-color: var(--bg-light); }
+.section-title { text-align: center; margin-bottom: 3rem; font-size: 2rem; position: relative; }
+.section-title::after {
+    content: ''; display: block; width: 50px; height: 3px; 
+    background: var(--primary-color); margin: 10px auto;
+}
+
+/* 作品网格 (AI & 建筑) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 响应式布局 */
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.card:hover { transform: translateY(-5px); }
+.card-img-wrapper { height: 200px; overflow: hidden; }
+.card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+.card:hover img { transform: scale(1.05); }
+.card-info { padding: 1.5rem; }
+.card-info h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
+.card-info p { margin: 0; color: #666; font-size: 0.9rem; }
+
+/* 时间轴 (经历) */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border-left: 2px solid var(--primary-color);
+    padding-left: 30px;
+}
+.timeline-item { margin-bottom: 2rem; position: relative; }
+.timeline-item::before {
+    content: ''; position: absolute; left: -36px; top: 0;
+    width: 10px; height: 10px; background: white;
+    border: 2px solid var(--primary-color); border-radius: 50%;
+}
+.timeline-date { font-weight: bold; color: var(--primary-color); margin-bottom: 5px; }
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+.timeline-content h3 { margin-top: 0; }
+.timeline-content ul { padding-left: 20px; margin-bottom: 0; }
+
+/* Lightbox (图片弹窗) */
+.lightbox {
+    display: none;
+    position: fixed; z-index: 2000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center; align-items: center;
+}
+.lightbox-content { max-width: 90%; max-height: 80vh; border-radius: 5px; }
+.close-btn { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; cursor: pointer; }
+.caption { text-align: center; color: #ccc; padding: 10px 0; position: absolute; bottom: 20px; width: 100%; }
+.prev, .next {
+    cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px;
+    margin-top: -50px; color: white; font-weight: bold; font-size: 20px;
+    transition: 0.6s ease; user-select: none;
+}
+.next { right: 0; } .prev { left: 0; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+/* 底部 */
+footer { text-align: center; padding: 20px; background: #333; color: white; }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* 简化处理，移动端可折叠 */
+    .hero h1 { font-size: 2rem; }
+    .section-container { padding: 3rem 5%; }
+}

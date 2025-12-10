@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴琬晶 - 产品经理 & 服务设计师</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Wanjin.Wu</div>
+        <ul class="nav-links">
+            <li><a href="#home">关于我</a></li>
+            <li><a href="#product-works">产品与服务设计</a></li> <li><a href="#tech-works">数字创意与技术</a></li> <li><a href="#experience">经历与教育</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="assets/avatar.jpg" alt="吴琬晶" class="profile-img">
+            <h1>你好，我是 吴琬晶</h1>
+            <h2>产品经理 | 服务设计师 | 数字媒体技术背景</h2>
+            <p>
+                硕士毕业于格拉斯哥大学(QS78)服务设计专业，本科数字媒体技术专业排名第一(1/76)。<br>
+                我擅长将深度的用户洞察转化为从0到1的系统化解决方案，<br>
+                同时拥有 C/Python 编程背景，能高效连接设计思维与技术落地。
+            </p>
+            <div class="social-links">
+                <a href="mailto:a742058032@163.com"><i class="fas fa-envelope"></i> 邮箱</a>
+                <a href="#"><i class="fab fa-weixin"></i> 微信: 19113588879</a>
+                </div>
+        </div>
+    </section>
+
+    <section id="product-works" class="section-container">
+        <h2 class="section-title">精选产品与服务设计</h2>
+        <p class="section-subtitle">从用户痛点洞察到商业价值验证的完整案例</p>
+        <div class="gallery-grid">
+            
+            <div class="card" onclick="openLightbox('product', 0)">
+                <div class="card-img-wrapper">
+                    <img src="images/01.png" alt="Shared Sense">
+                </div>
+                <div class="card-info">
+                    <h3>Shared Sense 共享空间引导系统</h3>
+                    <p>0-1产品设计 | 降低合租焦虑45% | 获2025试点计划采纳</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="openLightbox('product', 1)">
+                <div class="card-img-wrapper">
+                    <img src="images/bar-service-cover.jpg" alt="The State Bar">
+                </div>
+                <div class="card-info">
+                    <h3>苏格兰百年酒吧数字化转型</h3>
+                    <p>服务设计咨询 | 线上线下一体化方案 | 客户完整采纳</p>
+                </div>
+            </div>
+            
+            <div class="card" onclick="openLightbox('product', 2)">
+                <div class="card-img-wrapper">
+                    <img src="images/growth-cover.jpg" alt="全民健身增长">
+                </div>
+                <div class="card-info">
+                    <h3>“全民健身”用户增长策略</h3>
+                    <p>数据驱动运营 | 提升周活跃度与留存 | 部门最佳案例</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="openLightbox('product', 3)">
+                <div class="card-img-wrapper">
+                    <img src="images/media-cover.jpg" alt="新媒体产品">
+                </div>
+                <div class="card-info">
+                    <h3>高校新媒体内容产品化</h3>
+                    <p>粉丝净增3w+ | A/B测试优化 | 团队效率提升40%</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="tech-works" class="section-container bg-light">
+        <h2 class="section-title">数字创意与技术探索</h2>
+        <p class="section-subtitle">UI/UX · 虚拟现实(VR) · 游戏策划 · 摄影</p>
+        <div class="gallery-grid">
+            
+            <div class="card" onclick="openLightbox('tech', 0)">
+                <div class="card-img-wrapper">
+                    <img src="images/tech-1.jpg" alt="UI/UX设计">
+                </div>
+                <div class="card-info">
+                    <h3>UI/UX 交互设计集</h3>
+                    <p>基于Figma的多端界面设计探索</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="openLightbox('tech', 1)">
+                <div class="card-img-wrapper">
+                    <img src="images/tech-2.jpg" alt="Unity/VR作品">
+                </div>
+                <div class="card-info">
+                    <h3>虚拟现实(VR) 开发Demo</h3>
+                    <p>基于Unity 3D的沉浸式交互体验</p>
+                </div>
+            </div>
+            
+            <div class="card" onclick="openLightbox('tech', 2)">
+                <div class="card-img-wrapper">
+                    <img src="images/photo-1.jpg" alt="摄影作品">
+                </div>
+                <div class="card-info">
+                    <h3>视觉与摄影</h3>
+                    <p>光影捕捉与视觉叙事</p>
+                </div>
+            </div>
+
+             <div class="card" onclick="openLightbox('tech', 3)">
+                <div class="card-img-wrapper">
+                    <img src="images/game-design.jpg" alt="游戏策划">
+                </div>
+                <div class="card-info">
+                    <h3>游戏策划案</h3>
+                    <p>系统机制设计与数值平衡</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="section-container">
+        <h2 class="section-title">经历与教育</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2024.09 - 2025.11</div>
+                <div class="timeline-content">
+                    <h3>硕士 | Design Innovation & Citizenship</h3>
+                    <h4>格拉斯哥大学 (University of Glasgow) - QS 78</h4>
+                    <p>专注于服务设计与社会创新，掌握服务蓝图、客户旅程地图、共创Workshop等方法论。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2025.02 - 2025.06</div>
+                <div class="timeline-content">
+                    <h3>产品经理实习生</h3>
+                    <h4>Insights Learning & Development</h4>
+                    <p><strong>项目：Shared Sense 共享空间行为引导系统</strong></p>
+                    <ul>
+                        <li><strong>洞察痛点：</strong>组织20+场深度访谈，定位室友隐性冲突，提出“主动理解”匹配机制。</li>
+                        <li><strong>原型验证：</strong>使用Figma完成交互原型，测试用户“合租焦虑度”降低45%。</li>
+                        <li><strong>成果：</strong>完整方案获合作方采纳，纳入2025年产品试点计划。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2024.03 - 2024.08</div>
+                <div class="timeline-content">
+                    <h3>产品运营实习生 (增长方向)</h3>
+                    <h4>江西省体育协会</h4>
+                    <p><strong>项目：“全民健身”活动用户增长</strong></p>
+                    <ul>
+                        <li><strong>策略制定：</strong>针对中老年用户流失痛点，设计“线上打卡+线下导师”策略。</li>
+                        <li><strong>活动执行：</strong>策划执行覆盖200+人的线下展演，实现线上线下闭环。</li>
+                        <li><strong>成果：</strong>有效提升周活跃度与次月留存，获评部门“最佳实践案例”。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">2020.09 - 2024.06</div>
+                <div class="timeline-content">
+                    <h3>本科 | 数字媒体技术</h3>
+                    <h4>成都大学 (Chengdu University)</h4>
+                    <p><strong>专业排名 1/76 | 四川省优秀毕业生 | 校特级奖学金</strong></p>
+                    <p>主修：C语言、数据结构、UI/UX设计、虚拟现实(VR)、人工智能(AI)。</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="caption" id="caption"></div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 吴琬晶. All Rights Reserved. | 19113588879</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
